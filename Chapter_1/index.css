@@ -1,0 +1,32 @@
+html, body, div {
+    margin: 0;
+    padding: 0;
+}
+
+.spotlight-container {
+    text-align: center;
+}
+
+.spotlight-3 {
+    stroke: black;
+    stroke-width: 2;
+}
+
+.rect-3 {
+    fill: gray;
+    stroke: black;
+    stroke-width: 3;
+    height: 300;
+}
+
+.spotlight-3 use:nth-of-type(1) {
+    fill: red;
+}
+
+.spotlight-3 use:nth-of-type(2) {
+    fill: yellow;
+}
+
+.spotlight-3 use:nth-of-type(3) {
+    fill: green;
+}

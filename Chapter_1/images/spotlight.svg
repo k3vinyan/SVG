@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en" width="200px" height="320px">
+    <title>Primary Color Stoplight 2</title>
+    <rect x="30" y="10" width="150" height="300" fill="gray" stroke="black" stroke-width="3" />
+
+    <defs>
+        <circle id="circle" cx="105" r="30" />
+    </defs>
+
+    <g stroke="black" stroke-width="2">
+        <use xlink:href="#circle" y="75"  fill="red" />
+        <use xlink:href="#circle" y="155" fill="yellow" />
+        <use xlink:href="#circle" y="235" fill="green" />
+    </g>
+</svg>

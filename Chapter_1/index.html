@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 1 - Stoplight</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="spotlight-container spotlight-1">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" width="200px" height="320px">
+                
+                <rect x="30" y="10" width="150" height="300" fill="gray" stroke="black" stroke-width="3" />
+
+                <defs>
+                    <circle id="circle" cx="105" r="30" />
+                </defs>
+
+                <g stroke="black" stroke-width="2">
+                    <use xlink:href="#circle" y="75"  fill="red" />
+                    <use xlink:href="#circle" y="155" fill="yellow" />
+                    <use xlink:href="#circle" y="235" fill="green" />
+                   
+                </g>
+            </svg>
+        </div>
+        
+        <div>
+             <span>inline SVG</span>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="spotlight-container spotlight-2">
+        <img src="images/spotlight.svg" />
+        <div>
+            <span>external SVG</span>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="spotlight-container">
+        <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" width="200px" height="320px" class="spotlight-3">
+            <title>Primary Color Stoplight 3</title>
+            <defs>
+                <circle r="30" id="circle-3" />
+            </defs>
+            <rect x="30" y="10" width="150" height="300" class="rect-3"/>
+            <use xlink:href="#circle-3" x="105" y="75"  r="30" />
+            <use xlink:href="#circle-3" x="105" y="155" r="30" />
+            <use xlink:href="#circle-3" x="105" y="235" r="30" />
+        </svg>
+        <div>
+            <span>SVG with CSS</span>
+        </div>
+    </div>  
+
+    <hr />
+
+    <div class="spotlight-container">
+        <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" xml:link="http://www.w3.org/1999/xlink" width="200px" height="320px" class="spotlight-4">
+            <title>Gradient-Filled Stoplight</title>
+            <defs>
+                <circle cx="105" r="30" id="circle-4" />
+                <radialGradient id="red-light-off" fx="0.45" fy="0.4">
+                    <stop stop-color="maroon" offset="0" />
+                    <stop stop-color="#220000" offset="0.7" />
+                    <stop stop-color="black" offset="1.0" />
+                </radialGradient>
+                <radialGradient id="yellow-light-off" fx="0.45" fy="0.4">
+                    <stop stop-color="#A06000" offset="0" />
+                    <stop stop-color="#804000" offset="0.7" />
+                    <stop stop-color="#502000" offset="1.0" />
+                </radialGradient>
+                <radialGradient id="green-light-off" fx="0.45" fy="0.4">
+                    <stop stop-color="#88FF00" offset="0" />
+                    <stop stop-color="forestGreen" offset="0.7" />
+                    <stop stop-color="darkGreen" offset="1.0" />
+                </radialGradient>
+                <linearGradient id="metal" spreadMethod="repeat" gradientTransform="scale(0.7) rotate(75)">
+                    <stop stop-color="#808080" offset="0" />
+                    <stop stop-color="#404040" offset="0.25" />
+                    <stop stop-color="#808080" offset="0.35" />
+                    <stop stop-color="#E0E0E0" offset="0.5" />
+                    <stop stop-color="#606060" offset="0.7" />
+                    <stop stop-color="#606060" offset="0.75" />
+                    <stop stop-color="#A0A0A0" offset="0.9" />
+                    <stop stop-color="#808080" offset="1" />
+                </linearGradient>
+            </defs>
+            <rect x="30" y="10" width="150" height="300" fill="url(#metal)" stroke="black" stroke-width="3" />
+            <g stroke="black" stroke-width="2">
+                <use xlink:href="#circle-4" y="75" fill="url(#red-light-off)" />
+                <use xlink:href="#circle-4" y="155" fill="url(#yellow-light-off)"  />
+                <use xlink:href="#circle-4" y="235" fill="url(#green-light-off)" />
+            </g>
+        </svg>
+    </div>
+    
+</body>
+</html>
